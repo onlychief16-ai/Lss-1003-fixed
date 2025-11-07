@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Suod Nasir Abdullah – Learning Portfolio (LSS1003)</title>
+<style>
+  :root{
+    --bg:#000000;        /* black */
+    --bg-alt:#102a5a;
+    --card:#0f2a59;
+    --muted:#a9b8d4;
+    --text:#ffffff;
+    --accent:#4da3ff;    /* bright blue */
+    --accent-2:#8bc1ff;
+    --light:#f7f9fc;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";
+    color:var(--text);
+    background:linear-gradient(180deg,var(--bg), var(--bg-alt) 60%, #081833);
+  }
+  a{color:var(--accent)}
+  header{
+    position:sticky;top:0;z-index:1000;
+    backdrop-filter: blur(8px);
+    background:rgba(8,24,51,.7);
+    border-bottom:1px solid rgba(255,255,255,.08);
+  }
+  .nav{
+    max-width:1100px;margin:auto;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:12px 20px;
+  }
+  .brand{font-weight:800;letter-spacing:.3px}
+  nav ul{display:flex;gap:14px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+  nav a{display:inline-block;padding:10px 12px;border-radius:10px;text-decoration:none;color:var(--text);font-weight:600;opacity:.9}
+  nav a:hover, nav a:focus{background:rgba(255,255,255,.08);outline:none}
+  .wrap{max-width:1100px;margin:0 auto;padding:40px 20px}
+  .hero{
+    display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center;
+    padding:60px 20px 30px 20px;
+  }
+  .hero h1{font-size:40px;margin:.2em 0 .2em 0}
+  .badge{display:inline-block;background:rgba(77,163,255,.15);color:var(--accent-2);padding:6px 10px;border-radius:999px;font-weight:700;font-size:12px;letter-spacing:.8px;text-transform:uppercase}
+  .meta{margin-top:16px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .card{
+    background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.03));
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:18px;padding:18px
+  }
+  .cta{display:inline-flex;gap:10px;align-items:center;margin-top:14px}
+  .btn{
+    border:none;background:var(--accent);color:#001633;
+    font-weight:800;padding:12px 16px;border-radius:12px;cursor:pointer;text-decoration:none
+  }
+  .btn.secondary{background:transparent;color:var(--text);border:1px solid rgba(255,255,255,.18)}
+  h2{margin:0 0 14px 0;font-size:28px}
+  p{color:var(--muted);line-height:1.6}
+  .grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+  .timeline{border-left:2px dashed rgba(255,255,255,.2);margin-left:8px;padding-left:20px}
+  .tl-item{margin:10px 0;padding:10px 12px;border-left:4px solid var(--accent);background:rgba(255,255,255,.04);border-radius:10px}
+  table{width:100%;border-collapse:collapse;background:rgba(255,255,255,.03);border-radius:12px;overflow:hidden}
+  th,td{padding:12px 10px;border-bottom:1px solid rgba(255,255,255,.08);text-align:left}
+  th{background:rgba(77,163,255,.15);color:#d7e9ff}
+  .certs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+  .cert{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:14px}
+  .cert h3{margin-top:0}
+  .video{aspect-ratio:16/9;background:#020a1a;border:1px dashed rgba(255,255,255,.2);border-radius:14px;display:flex;align-items:center;justify-content:center;color:#8aa6d9}
+  form{display:grid;gap:12px}
+  input, textarea{
+    background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);
+    color:var(--text);padding:12px;border-radius:12px;resize:vertical
+  }
+  footer{border-top:1px solid rgba(255,255,255,.08);margin-top:40px;padding:24px 20px;color:#b5c5e6;text-align:center}
+  /* Responsive */
+  @media (max-width:900px){ .hero{grid-template-columns:1fr} .grid-2{grid-template-columns:1fr} .certs{grid-template-columns:1fr} .meta{grid-template-columns:1fr} }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="brand">Suod’s Learning Portfolio</div>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#weekly">Weekly Tasks</a></li>
+        <li><a href="#cream">C.R.E.A.M</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#conclusion">Conclusion</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- HOME -->
+  <section id="home" class="hero" aria-labelledby="home-title">
+    <div>
+      <span class="badge">LSS1003 • Portfolio</span>
+      <h1 id="home-title">Suod Nasir Abdullah</h1>
+      <p style="font-size:18px;color:#d1def8">Future Mechatronics Engineer</p>
+      <div class="meta">
+        <div class="card">
+          <strong>HCT ID</strong><br/>H00461994
+        </div>
+        <div class="card">
+          <strong>Course</strong><br/>LSS 1003 – Learning Study Skills
+        </div>
+        <div class="card">
+          <strong>Major</strong><br/>Mechatronics Engineering
+        </div>
+        <div class="card">
+          <strong>CRN</strong><br/>14638
+        </div>
+      </div>
+      <div class="cta">
+        <a class="btn" href="#about">Explore Portfolio</a>
+        <a class="btn secondary" href="#contact">Contact</a>
+      </div>
+    </div>
+    <div class="card" aria-label="Hero Visual Placeholder">
+  <div class="video">
+    <img src="https://raw.githubusercontent.com/onlychief16-ai/Lss-1003/main/ChatGPT%20Image%20Nov%207%2C%202025%2C%2005_13_14%20PM.png" 
+         alt="Suod Nasir Abdullah – Mechatronics Engineer" 
+         style="max-width:100%; border-radius:12px;">
+  </div>
+  <p style="margin-top:10px;color:#b8c8ea">My AI-Generated Portrait as a Future Mechatronics Engineer</p>
+</div>
+
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="card" aria-labelledby="about-title">
+    <h2 id="about-title">About Me</h2>
+    <div class="grid-2">
+      <div>
+        <h3>Who am I?</h3>
+        <p>I am Suod Nasir Abdullah, a Mechatronics Engineering student who enjoys combining creativity with technology to solve real-world problems. I value discipline, teamwork, and curiosity, and I’m always willing to learn, improve, and challenge myself.</p>
+        <h3>Purpose of this e-Portfolio</h3>
+        <p>This e-Portfolio showcases my growth and learning throughout the LSS 1003 course. It reflects how I apply study strategies, manage time effectively, and develop lifelong learning skills for my academic and professional journey.</p>
+      </div>
+      <div>
+        <h3>Goals</h3>
+        <ul>
+          <li>Develop strong problem-solving and analytical skills in mechatronics and automation.</li>
+          <li>Enhance teamwork and communication for professional collaboration.</li>
+          <li>Apply effective learning and time-management techniques in study and daily life.</li>
+          <li>Gain practical experience in robotics and embedded systems.</li>
+          <li>Continuously improve mentally and physically through discipline and persistence.</li>
+        </ul>
+        <h3>Interests</h3>
+        <p>Robotics & automation • Embedded systems • AI & control systems</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WEEKLY TASKS -->
+  <section id="weekly" class="card" aria-labelledby="weekly-title">
+    <h2 id="weekly-title">My Weekly Tasks</h2>
+    <div class="timeline">
+
+  <!-- WEEK 1 -->
+  <div class="tl-item">
+  <strong>Week 1 – Lessons 1 & 2:</strong> Introduction to effective learning and self-management, and Understanding your learning style.<br><br>
+
+  <strong>Task 1(a):</strong>
+  <a href="https://hctuae-my.sharepoint.com/:i:/g/personal/h00461994_hct_ac_ae/ESWHvL_-CFBGvYK6UFFoFGMBkPOCn5CZKKaFL7Sj_nO4sQ?e=gFuzOV"
+     target="_blank" rel="noopener">
+     View Course Learning Objectives Screenshot
+  </a><br><br>
+
+  <strong>Task 1(b):</strong>
+  <a href="https://hctuae-my.sharepoint.com/:i:/g/personal/h00461994_hct_ac_ae/ESnq3aNAkQNLv22Bzk5zRewB1pAON5bmC-Z-rB9XBUlSzQ?e=aeySqf"
+     target="_blank" rel="noopener">
+     View Assessment Strategy Screenshot
+  </a><br><br>
+
+  <strong>Task 2:</strong>
+  <a
+     VARK Questionnaire
+  </a> <br><br>
+  <a href="https://hctuae-my.sharepoint.com/:i:/r/personal/h00461994_hct_ac_ae/Documents/LSS%201003/Assessments/week1_lesson2.jpg?csf=1&web=1&e=ahdb12https://hctuae-my.sharepoint.com/:i:/g/personal/h00461994_hct_ac_ae/EX9vNi3qO8dOg9z6ZRkmbG4BpYNWVDgEZRqVOaQRIQxy0Q?e=x71Htb"
+     target="_blank" rel="noopener">
+     🔗 Click here to view the VARK Results Screenshot
+  </a>
+</div>
+
+  <!-- WEEK 2 -->
+<div class="tl-item">
+  <strong>Week 2 – Lessons 1 & 2:</strong> Time-management, prioritization techniques, and using AI in daily learning.<br><br>
+
+  <strong>Task 1:</strong>
+  <a href="https://hctuae-my.sharepoint.com/:i:/g/personal/h00461994_hct_ac_ae/EaK7rl4X8xtApw118eFXSxEB0YupbTTmRp0Prk25sDaRVg?e=feUvrG"
+     target="_blank" rel="noopener">
+     🔗 Click here to view the activity
+  </a><br><br>
+
+  <strong>Task 2:</strong>
+  <a href="https://hctuae-my.sharepoint.com/:w:/g/personal/h00461994_hct_ac_ae/ER8pGeO5u8VFjkELdsR-cEoBMDcF__inEuBcV7ilsRrZzQ?e=jGZlzt"
+     target="_blank" rel="noopener">
+     🔗 Click here to view the AI Tools Screenshot
+  </a>
+</div>
+
+
+  <!-- WEEK 3 -->
+<div class="tl-item">
+  <strong>Week 3 – Lessons 1 & 2:</strong> SQ3R Reading Strategy and Bias Detector Poster.<br><br>
+
+  <strong>Task 1:</strong>
+  <a href="https://hctuae-my.sharepoint.com/:b:/g/personal/h00461994_hct_ac_ae/EUlRJKBl2R1ErFzjGO4_dk8BOlk8RHNBscFdFMf0OQzioQ?e=36U8TD"
+     target="_blank" rel="noopener">
+     🔗 Click here to view the SQ3R Worksheet Screenshot
+  </a><br><br>
+
+  <strong>Task 2 – AI Bias Detector :</strong><br><br>
+  <strong>3 Signs of Bias in AI Content:</strong><br>
+  1. <strong>Stereotyping:</strong> The AI repeats harmful or unfair assumptions about a group (e.g., gender, race, nationality).<br>
+  2. <strong>Imbalanced Representation:</strong> One group is shown positively while another is shown negatively without reason.<br>
+  3. <strong>Exclusion or Erasure:</strong> Important groups or voices are missing when they should be included.<br><br>
+
+  <strong>2 Tips to Avoid AI Bias:</strong><br>
+  1. <strong>Use Diverse Training Data:</strong> Ensure the AI training data includes many cultures and viewpoints to keep it fair and balanced.<br>
+  2. <strong>Human Review and Feedback:</strong> Always have a human review AI content, especially for sensitive topics, to catch and correct bias.
+</div>
+
+
+
+   <!-- WEEK 4 -->
+<div class="tl-item">
+  <strong>Week 4 – Lessons 1 & 2:</strong> Notetaking with Copilot and Mind Map of Memory Techniques.<br><br>
+
+  <strong>Task 1:</strong>
+  <a href="https://hctuae-my.sharepoint.com/:w:/g/personal/h00461994_hct_ac_ae/Ef94KkD7LvpPjMTARtatW5IBsVbBSS848mHXJ3d9NAJDNQ?e=OSWddx"
+     target="_blank" rel="noopener">
+     🔗 Click here to view the Notetaking with Copilot document
+  </a><br><br>
+
+  <strong>Task 2:</strong>
+  <a href="https://hctuae-my.sharepoint.com/:i:/g/personal/h00461994_hct_ac_ae/EcGZPPnvg1VJhsUwgcIOhXcB5iyhY6mWF_Zn0-6pp8vnLQ?e=Vj8k6F"
+     target="_blank" rel="noopener">
+     🔗 Click here to view the Mind Map Screenshot
+  </a>
+</div>
+
+  <!-- WEEK 5 -->
+ <div class="tl-item">
+  <strong>Week 5 – Lessons 1 & 2:</strong> Reflection on Learning Styles and Microsoft To-Do Study Plan.<br><br>
+
+  <strong>Task 1:</strong>
+  <a href="https://hctuae-my.sharepoint.com/:w:/g/personal/h00461994_hct_ac_ae/Ecf3LyBaglhHs1J0H5M-27kB7GQ65Rj_SOhiM2WXXzPLOg?e=nnQifs"
+     target="_blank" rel="noopener">
+     🔗 Click here to view the Reflection Sheet
+  </a><br><br>
+
+  <strong>Task 2:</strong>
+  <a href="https://hctuae-my.sharepoint.com/:i:/g/personal/h00461994_hct_ac_ae/EUSJpe4BBZ5Ambs8qDcfW94BVcedzQ5VUPV2mjT9RVUDxg?e=IUFYoi"
+     target="_blank" rel="noopener">
+     🔗 Click here to view the Microsoft To-Do Screenshot
+  </a>
+</div>
+
+</div>
+
+      <div class="tl-item">
+  <strong>Week 6 – Lesson 1:</strong> AI Ethics – Using Artificial Intelligence Responsibly.<br><br>
+
+  <strong>Task 1 – Reflection:</strong><br>
+  • I learned that using AI in learning can be helpful, but we must always check the information it gives us instead of accepting everything as true.<br>
+  • I now understand that AI can contain bias because it is trained on human-made data, so I should think critically and question results that seem unfair or inaccurate.<br>
+  • I also learned that protecting data privacy is important, and I should avoid giving personal or sensitive information to AI tools unless I know how the data will be stored and used.
+</div>
+<div class="tl-item">
+  <strong>Week 7 – Lessons 1 & 2:</strong> Managing the Study Environment and Setting SMART Goals.<br><br>
+
+  <strong>Task 1 – Managing the Study Environment:</strong><br>
+  Before I start studying, I like to organize my desk and remove any distractions so I can focus better. 
+  I also make a cup of coffee or water, which helps me stay energized and ready to learn.<br><br>
+
+  <strong>Task 2 – SMART Goal:</strong><br>
+  <em>Specific:</em> I want to improve my English writing skills by practicing academic paragraphs every week.<br>
+  <em>Measurable:</em> I will write one paragraph per week and track my progress in a document.<br>
+  <em>Achievable:</em> I will use class notes, online examples, and feedback from my teacher to improve.<br>
+  <em>Relevant:</em> This goal is important because strong writing skills will help me in university and future career tasks.<br>
+  <em>Time-bound:</em> I will complete 12 paragraphs by the end of this semester.<br><br>
+
+  <strong>Final SMART Goal Statement:</strong><br>
+  “I will write one academic paragraph every week and complete 12 paragraphs by the end of the semester to improve my English writing skills.”
+</div>
+<div class="tl-item">
+  <strong>Week 8 – Lessons 1 & 2:</strong> Final Reflection and Course Feedback.<br><br>
+
+  <strong>Task 1 – Final Reflection:</strong><br>
+  <a href="https://hctuae-my.sharepoint.com/:i:/g/personal/h00461994_hct_ac_ae/EQY3KZ46MENKl0SezvyLwE4BqUjTRjRUtm70ei8BJKLu2Q?e=WJSky"
+     target="_blank" rel="noopener">
+     🔗 Click here to view the Final Reflection Screenshot
+  </a><br><br>
+
+  <strong>Task 2 – Course Feedback Form:</strong><br>
+  <a href="https://hctuae-my.sharepoint.com/:b:/g/personal/h00461994_hct_ac_ae/EXZ6AAfH3zJNnEvpo8tjTNABb31dXjkDiluRIEq5kn80EQ?e=ly7xjq"
+     target="_blank" rel="noopener">
+     🔗 Click here to view the Course Feedback Screenshot
+  </a>
+</div>
+
+  </a>
+</div>
+
+
+    </div>
+  </section>
+
+  <!-- C.R.E.A.M -->
+  <section id="cream" class="card" aria-labelledby="cream-title">
+    <h2 id="cream-title">Effective Learning Techniques – C.R.E.A.M Strategy</h2>
+    <div style="overflow:auto">
+      <table role="table" aria-label="C.R.E.A.M table">
+        <thead>
+          <tr><th>Aspect</th><th>Description</th><th>Example</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Creative</strong></td><td>Thinking in innovative ways to solve problems.</td><td>Applying creative approaches to mechatronics design challenges.</td></tr>
+          <tr><td><strong>Reflective</strong></td><td>Reviewing experiences to learn from them.</td><td>After each assignment, noting what went well and what to improve.</td></tr>
+          <tr><td><strong>Effective</strong></td><td>Organizing time and resources efficiently.</td><td>Using a weekly plan to meet deadlines and reduce stress.</td></tr>
+          <tr><td><strong>Active</strong></td><td>Participating in learning rather than just listening.</td><td>Taking notes, asking questions, and practicing.</td></tr>
+          <tr><td><strong>Motivated</strong></td><td>Staying focused on goals and achievements.</td><td>Driven by the goal of becoming a successful Mechatronics Engineer.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:10px;color:#b8c8ea">Note: No AI images should be used on this page as per instructions.</p>
+  </section>
+
+  <!-- ACHIEVEMENTS -->
+  <section id="achievements" class="card" aria-labelledby="achievements-title">
+    <h2 id="achievements-title">Achievements & Certificates</h2>
+    <div class="certs">
+      <div class="cert">
+        <h3>IC3 Certificate</h3>
+        <p>Digital Literacy and Computer Skills.</p>
+        <a class="btn" href="https://hctuae-my.sharepoint.com/:b:/g/personal/h00461994_hct_ac_ae/ETyMWfeiyVBAuJk8pAvNC3cB-kJAvXA6nmMKGbS6ZZFxtQ?e=IJOrvY" target="_blank" rel="noopener">Open Link</a>
+      </div>
+    </div>
+      <div class="cert">
+        <h3>LinkedIn Learning – Learning Study Skills</h3>
+        <p>Certificate of completion.</p>
+        <a class="btn" href="https://hctuae-my.sharepoint.com/:i:/g/personal/h00461994_hct_ac_ae/EU6CwOqXHXdHmFZm6VTt4eUBBZ0gllet8vh0Bhd8O6jQ7g?e=n5H0O0" target="_blank" rel="noopener">Open Link</a>
+      </div>
+      <div class="cert">
+        <h3>LinkedIn Learning – Time Management Fundamentals</h3>
+        <p>Certificate of completion.</p>
+        <a class="btn" href="https://hctuae-my.sharepoint.com/:i:/g/personal/h00461994_hct_ac_ae/EXuyRIwYQhBAjCJAyQy34-sBY1WCVQKTZFn64g5SyYy61Q?e=3rJzPG" target="_blank" rel="noopener">Open Link</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONCLUSION -->
+  <section id="conclusion" class="card" aria-labelledby="conclusion-title">
+  <h2 id="conclusion-title">Conclusion – Reflection Video</h2>
+  <div class="video">
+    <a class="btn" href="https://hctuae-my.sharepoint.com/:v:/g/personal/h00461994_hct_ac_ae/EXC6Qt7lTo9GgQ3Gycw-u4gByE2xLpgxoYkUG_AxMH9jfw?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=jMMiUY" target="_blank" rel="noopener">
+      🔗 Click here to watch my Reflection Video
+    </a>
+  </div>
+  <p style="margin-top:10px;color:#b8c8ea">
+    This video includes my personal reflection on what I learned in the LSS1003 course.
+  </p>
+</section>
+
+
+
+
+    </p>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="card" aria-labelledby="contact-title">
+    <h2 id="contact-title">Contact</h2>
+    <form onsubmit="event.preventDefault(); alert('This preview does not send messages. In Canva, link this to your email or use a form block.');">
+      <div class="grid-2">
+        <div><label>Name<br/><input type="text" value="Suod Nasir Abdullah" aria-label="Name"></label></div>
+        <div><label>HCT ID<br/><input type="text" value="H00461994" aria-label="HCT ID"></label></div>
+      </div>
+      <label>Email<br/><input type="email" value="H00461994@hct.ac.ae" aria-label="Email"></label>
+      <label>Message<br/><textarea rows="4" placeholder="Write your message..."></textarea></label>
+      <button class="btn" type="submit">Send</button>
+      <a class="btn secondary" href="#home">Back to Top</a>
+    </form>
+  </section>
+
+</main>
+
+<footer>
+  © 2025 Suod Nasir Abdullah • LSS1003 – Learning Study Skills • CRN 14638
+</footer>
+
+</body>
+</html>
